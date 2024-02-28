@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Login</title>
+        <title>Welcome</title>
     </head>
     <body>
         <h1>Welcome to TODO Application</h1>
