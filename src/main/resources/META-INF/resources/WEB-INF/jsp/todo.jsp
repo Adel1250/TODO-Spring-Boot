@@ -1,16 +1,14 @@
 <html>
     <head>
-        <title>Login</title>
+        <title>Add Todo</title>
         <link href="webjars/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet" >
     </head>
     <body>
     <div class="container">
-            <h1>TODO Application</h1>
-            <pre>${errorMessage}</pre>
+            <h1>Add Todo</h1>
             <form class="form"method="post">
-                Username: <input type="text" name="username" placeholder="Username">
-                Password: <input type="password", name="password" placeholder="Password">
-                <input type="submit">
+                Description: <input type="text" name="description" placeholder="Description">
+                <input type="submit" class="btn btn-success"></input>
             </form>
         </div>
         <script src="webjars/bootstrap/5.1.3/js/bootstrap.min.js"></script>

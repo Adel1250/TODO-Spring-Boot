@@ -10,22 +10,23 @@ import java.util.List;
 @Service
 public class TodoService {
     private static final List<Todo> todoList = new ArrayList<>();
+    private static long TODOS_COUNT = 0;
     static {
         todoList.add(Todo.builder()
                 .targetDate(LocalDate.now().plusYears(1))
-                .todoID(1L)
+                .todoID(++TODOS_COUNT)
                 .userID(1L)
                 .description("C")
                 .done(false).build());
         todoList.add(Todo.builder()
                 .targetDate(LocalDate.now().plusYears(2))
-                .todoID(2L)
+                .todoID(++TODOS_COUNT)
                 .userID(1L)
                 .description("Java")
                 .done(false).build());
         todoList.add(Todo.builder()
                 .targetDate(LocalDate.now().plusYears(3))
-                .todoID(3L)
+                .todoID(++TODOS_COUNT)
                 .userID(1L)
                 .description("Python")
                 .done(false).build());
@@ -33,5 +34,14 @@ public class TodoService {
 
     public List<Todo> getTodosByUserID(Long userID) {
         return todoList;
+    }
+
+    public void addTodo(String description) {
+        todoList.add(Todo.builder()
+                .targetDate(LocalDate.now().plusYears(1))
+                .todoID(++TODOS_COUNT)
+                .userID(1L)
+                .description(description)
+                .done(false).build());
     }
 }
