@@ -44,4 +44,17 @@ public class TodoService {
                 .description(description)
                 .done(false).build());
     }
+
+    public void deleteTodo(Long id) {
+        todoList.removeIf(todo -> todo.getTodoID().equals(id));
+    }
+
+    public Todo getTodoByID(Long id) {
+        return todoList.stream().filter(todo -> todo.getTodoID().equals(id)).findFirst().orElse(null);
+    }
+
+    public void updateTodo(Todo todo) {
+        deleteTodo(todo.getTodoID());
+        todoList.add(todo);
+    }
 }

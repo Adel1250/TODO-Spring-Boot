@@ -1,5 +1,6 @@
 package com.adel.todo.model;
 
+import jakarta.validation.constraints.NotBlank;
 import lombok.*;
 
 import java.time.LocalDate;
@@ -14,6 +15,7 @@ import java.time.LocalDate;
 @EqualsAndHashCode
 public class Todo {
     private Long todoID;
+    @NotBlank(message = "Description is mandatory")
     private String description;
     private Boolean done;
     private LocalDate targetDate;
