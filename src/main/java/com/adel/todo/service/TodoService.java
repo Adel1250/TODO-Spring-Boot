@@ -36,12 +36,12 @@ public class TodoService {
         return todoList;
     }
 
-    public void addTodo(String description) {
+    public void addTodo(Todo todo) {
         todoList.add(Todo.builder()
-                .targetDate(LocalDate.now().plusYears(1))
+                .targetDate(todo.getTargetDate())
                 .todoID(++TODOS_COUNT)
                 .userID(1L)
-                .description(description)
+                .description(todo.getDescription())
                 .done(false).build());
     }
 

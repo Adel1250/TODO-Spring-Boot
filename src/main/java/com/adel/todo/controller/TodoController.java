@@ -37,7 +37,7 @@ public class TodoController {
         if (bindingResult.hasErrors()) {
             return "todo";
         }
-        todoService.addTodo(todo.getDescription());
+        todoService.addTodo(todo);
         return "redirect:todos";
     }
 

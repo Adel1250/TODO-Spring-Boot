@@ -7,7 +7,7 @@
     <div class="container">
             <h1>TODO Application</h1>
             <pre>${errorMessage}</pre>
-            <form class="form"method="post">
+            <form class="form" method="post">
                 Username: <input type="text" name="username" placeholder="Username">
                 Password: <input type="password", name="password" placeholder="Password">
                 <input type="submit">
