@@ -20,6 +20,7 @@
 
                 <form:input type="hidden" path="todoID"/>
                 <form:input type="hidden" path="done"/>
+                <form:input type="hidden" path="username"/>
                 <input type="submit" class="btn btn-success"></input>
             </form:form>
         </div>

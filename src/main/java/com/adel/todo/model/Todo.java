@@ -20,4 +20,5 @@ public class Todo {
     private Boolean done;
     private LocalDate targetDate;
     private Long userID;
+    private String username;
 }

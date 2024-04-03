@@ -17,23 +17,26 @@ public class TodoService {
                 .todoID(++TODOS_COUNT)
                 .userID(1L)
                 .description("C")
-                .done(false).build());
+                .done(false)
+                .username("adel").build());
         todoList.add(Todo.builder()
                 .targetDate(LocalDate.now().plusYears(2))
                 .todoID(++TODOS_COUNT)
                 .userID(1L)
                 .description("Java")
-                .done(false).build());
+                .done(false)
+                .username("adel").build());
         todoList.add(Todo.builder()
                 .targetDate(LocalDate.now().plusYears(3))
                 .todoID(++TODOS_COUNT)
                 .userID(1L)
                 .description("Python")
-                .done(false).build());
+                .done(false)
+                .username("adel").build());
     }
 
-    public List<Todo> getTodosByUserID(Long userID) {
-        return todoList;
+    public List<Todo> getTodosByUsername(String username) {
+        return todoList.stream().filter(todo -> todo.getUsername().equals(username)).toList();
     }
 
     public void addTodo(Todo todo) {
@@ -42,7 +45,8 @@ public class TodoService {
                 .todoID(++TODOS_COUNT)
                 .userID(1L)
                 .description(todo.getDescription())
-                .done(false).build());
+                .done(false)
+                .username(todo.getUsername()).build());
     }
 
     public void deleteTodo(Long id) {
